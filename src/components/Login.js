@@ -38,10 +38,13 @@ const Login = () => {
             })
             .then((e)=> e.json())
             .then((e)=> {
-                console.log("login successfull")
+
+                if(e.token != undefined){
+                console.log(e.token,"login successfull")
                 tokenExchange(e.token)
 
-            })
+            }else alert(" Invelid user")
+        })
             .catch((e)=>console.log("not ok"));
     };
 
@@ -58,10 +61,11 @@ const Login = () => {
         })
         .then((e)=> e.json())
         .then((e)=>{
-            console.log(e.data);
+            if(e.data != undefined){
+            console.log(e.data , "i am hear");
             dispatch(token(e.data))
             navigate("/");
-        })
+        }})
         .catch((e)=>console.log(e, "token errer"));
 
     }

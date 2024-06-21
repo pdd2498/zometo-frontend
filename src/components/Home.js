@@ -3,6 +3,7 @@ import NaveBar from './NaveBar'
 import { incrisr, decrice , token } from '../redux/counter/counterSlice'
 import { useSelector , useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom';
+import Footer from './Footer';
 
 
 export default function Home() {
@@ -37,7 +38,7 @@ useEffect(()=>{
   return (
     <div>
         <NaveBar/>
-        <div className="container mx-auto mt-10 max-w-6xl">
+        <div className="container mx-auto mt-10 max-w-6xl mb-32">
       <h1 className="text-2xl font-bold mb-5">Products</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {
@@ -63,6 +64,7 @@ useEffect(()=>{
       </div>
 
     </div>
+    <Footer/>
     </div>
   )
 }

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import NaveBar from "./NaveBar"
 import { Link } from 'react-router-dom'
+import Footer from './Footer';
 
 export default function Shop() {
 
@@ -31,7 +32,7 @@ console.log("i am product", products)
         <>
         
         <NaveBar/>
-    <div className="container mx-auto mt-10 max-w-6xl">
+    <div className="container mx-auto mt-10 max-w-6xl mb-32">
         
         
         {
@@ -73,9 +74,9 @@ console.log("i am product", products)
                 return(
                         <div className=' border shadow-sm rounded-md'>
                             <div>
-                                <img src={e.Image_url} alt="" />
+                                <img className=' w-full h-80 overflow-hidden' src={e.Image_url} alt="" />
                             </div>
-                            <div className=' flex items-center justify-between p-3'>
+                            <div className=' flex items-center justify-between p-3 gap-28'>
                                 <div>
                                     <h3 className='text-xl font-semibold'>{e.Name}</h3>
                                     <div>
@@ -106,6 +107,7 @@ console.log("i am product", products)
         </div>
         
     </div>
+    <Footer/>
     </>
   )
 }

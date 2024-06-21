@@ -4,6 +4,7 @@ import NaveBar from "./NaveBar"
 import { Link, useParams } from 'react-router-dom'
 import AddCount from './acids/AddCount';
 import axios from 'axios';
+import Footer from './Footer';
 
 export default function ShopProducts() {
 
@@ -98,7 +99,7 @@ console.log("user data" , orderStatus)
         <>
         
         <NaveBar/>
-    <div className="container mx-auto mt-10 max-w-6xl">
+    <div className="container mx-auto mt-10 max-w-6xl mb-32">
         
         
         {
@@ -163,7 +164,7 @@ console.log("user data" , orderStatus)
                 return(
                         <div className=' border shadow-sm rounded-md'>
                             <div>
-                                <img src={e.Image_url} alt="" />
+                                <img className=' w-full h-80 overflow-hidden' src={e.Image_url} alt="" />
                             </div>
                             <div className=' flex items-center justify-between p-3'>
                                 <div>
@@ -196,6 +197,7 @@ console.log("user data" , orderStatus)
         </div>
         
     </div>
+    <Footer/>
     </>
   )
 }

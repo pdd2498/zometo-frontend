@@ -30,7 +30,7 @@ const SignIn = () => {
             Location: Location
         })
         try {
-            const response = await fetch('https://zometo-backend-clone-2.onrender.com/user/signin', {
+            const response = await fetch('https://zometo-backend-clone-2.onrender.com/api/user/signin', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
